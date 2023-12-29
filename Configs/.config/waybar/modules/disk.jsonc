@@ -1,0 +1,8 @@
+    "disk": {
+        "interval": 3,
+        "format": " {percentage_used}%",
+        "format-alt": "{used}/{total}",
+        "path": "/",
+        "tooltip": true,
+        "max-length": 1000
+    },

@@ -1,0 +1,7 @@
+"custom/weather": {
+    "exec": "~/.config/waybar/scripts/get_weather.sh Galati+Romania",
+    "return-type": "json",
+    "format": "{}",
+    "tooltip": true,
+    "interval": 3600
+},

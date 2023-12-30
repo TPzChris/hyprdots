@@ -6,7 +6,7 @@
 
 source global_fn.sh
 if [ $? -ne 0 ] ; then
-    echo "Error: unable to source global_fn.sh, please execute from $(dirname $(realpath $0))..."
+    echo "Error: unable to source global_fn.sh, please execute from $(dirname "$(realpath "$0")")..."
     exit 1
 fi
 
@@ -135,7 +135,7 @@ do
     if [ ! -z "$(echo $ctlLine | awk -F '|' '{print $3}')" ] ; then
         codex=$(echo $ctlLine | awk -F '|' '{print $3}' | cut -d '~' -f 1)
         if [ $(code --list-extensions |  grep -iwc "${codex}") -eq 0 ] ; then
-            code --install-extension "${codex}"
+            code --install-extension "${codex}" 2> /dev/null
         fi
     fi
 done < $ctlFile

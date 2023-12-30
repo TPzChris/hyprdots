@@ -3,7 +3,7 @@
 
 # read control file and initialize variables
 
-export ScrDir=`dirname $(realpath $0)`
+export ScrDir=`dirname "$(realpath "$0")"`
 waybar_dir="${XDG_CONFIG_HOME:-$HOME/.config}/waybar"
 export modules_dir="$waybar_dir/modules"
 export conf_file="$waybar_dir/config.jsonc"
